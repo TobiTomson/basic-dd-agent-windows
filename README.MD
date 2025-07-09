@@ -14,7 +14,7 @@ By using these configuration files, the following Datadog Agent features will be
 ## Usage
 
 1. **Install the Datadog Agent**  
-	Download and install the [Datadog Agent for Windows](https://docs.datadoghq.com/agent/basic_agent_usage/windows/) with all features enabled.
+	Download and install the [Datadog Agent for Windows](https://docs.datadoghq.com/agent/basic_agent_usage/windows/) with all features installed locally (important, else the [network monitoring support](https://docs.datadoghq.com/network_monitoring/cloud_network_monitoring/setup/?tab=agentlinux#windows-os) will be missing).
 
 2. **Copy Configuration Files**  
 	Copy the contents of this repository to the `%ProgramData%\Datadog` directory on your Windows machine.
