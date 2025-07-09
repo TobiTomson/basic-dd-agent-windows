@@ -10,6 +10,7 @@ By using these configuration files, the following Datadog Agent features will be
 - **Cloud Network Monitoring**: Monitors network traffic and performance for cloud environments.
 - **Universal Service Monitoring**: Automatically detects and monitors service-to-service communication.
 - **Network Path Monitoring**: Monitors network path performance to `app.datadoghq.com`.
+- **Windows Event Log Collection**: Collects logs from the Application, System, Security, and PowerShell event channels on your Windows host. This enables visibility into system, application, and security events for troubleshooting and compliance.
 
 ## Usage
 
@@ -56,3 +57,8 @@ By using these configuration files, the following Datadog Agent features will be
   - No active (uncommented) configuration. The default NTP monitoring settings will be used, which typically means monitoring the default NTP server.
   - To monitor a specific NTP server or adjust thresholds, uncomment and edit the relevant sections.
   - For more configuration options, see the [NTP check documentation](https://docs.datadoghq.com/integrations/ntp/) and review the commented-out sample parameters in this file.
+
+- **conf.d/win32_event_log.d/conf.yaml**
+  - Enables collection of Windows Event Logs using the modern event log API with `legacy_mode: false` for improved performance and reliability.
+  - By default, collects events from the `System` channel. You can add more channels or customize filters, queries, and advanced options as needed.
+  - For more configuration options, see the [Windows Event Log documentation](https://docs.datadoghq.com/integrations/windows_event_log/) and review the commented-out sample parameters in this file.
